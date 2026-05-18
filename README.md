@@ -33,7 +33,10 @@ The dashboard helps **scientists, data stewards, and field staff** quickly:
 # 1. Install dependencies
 pip install -r requirements.txt
 
-# 2. Run the dashboard
+# 2. Convert the CSV to Parquet (run this once)
+python convert_to_parquet.py
+
+# 3. Run the dashboard
 python -m streamlit run dashboard.py
 
 # The dashboard will open in the browser at http://localhost:8501
