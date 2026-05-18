@@ -118,5 +118,4 @@ These are configurable in the dashboard via the "custom limits" checkbox.
 
 3. **Apfelbaum, S.I., Heimerl, S., & Waller, D.M.** (2021). Shifts in precipitation and agricultural intensity increase phosphorus concentrations and loads in an agricultural watershed. *Journal of Environmental Management*, 290, 112651. https://www.sciencedirect.com/science/article/abs/pii/S0301479721000815
 
-4. **ChatGPT** was used for limited code syntax and debugging. The analysis, dashboard design, logic, and implementation were completed independently.
 
