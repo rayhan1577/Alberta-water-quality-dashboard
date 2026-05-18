@@ -43,7 +43,7 @@ python -m streamlit run dashboard.py
 
 The dashboard is hosted on Streamlit Community Cloud (free, read-only access):
 
-**URL:** ` `
+**URL:** `https://alberta-water-quality-dashboard-by-rayhan.streamlit.app/`
 
 No login required — just open the link.
 
