@@ -437,7 +437,13 @@ with tab3:
                  labels={"pct": "% Below Detection Limit", "VariableName": ""})
     fig.update_layout(height=500, yaxis={'categoryorder': 'total ascending'}, showlegend=False)
     st.plotly_chart(fig, use_container_width=True)
- st.markdown("---")
+    # ============================================================================
+    # Measurement Qualifier Trends by Month
+    # ============================================================================
+   # ============================================================================
+    # Measurement Qualifier Trends by Month
+    # ============================================================================
+    st.markdown("---")
     st.markdown("#### 📊 Measurement Qualifier Trends (Monthly)")
     st.caption("Select a qualifier type to see monthly trends over time.")
     
@@ -493,7 +499,6 @@ with tab3:
             st.metric("Average per month", f"{avg_count:.0f}")
     else:
         st.info("No measurement qualifiers in filtered data.")
-
 
 
  
