@@ -437,6 +437,63 @@ with tab3:
                  labels={"pct": "% Below Detection Limit", "VariableName": ""})
     fig.update_layout(height=500, yaxis={'categoryorder': 'total ascending'}, showlegend=False)
     st.plotly_chart(fig, use_container_width=True)
+ st.markdown("---")
+    st.markdown("#### 📊 Measurement Qualifier Trends (Monthly)")
+    st.caption("Select a qualifier type to see monthly trends over time.")
+    
+    # Get unique qualifiers
+    qual_data = fdf[fdf["MeasurementQualifierDescription"].notna()].copy()
+    
+    if len(qual_data) > 0:
+        # Dropdown
+        available_qualifiers = sorted(qual_data["MeasurementQualifierDescription"].unique())
+        selected_qualifier = st.selectbox(
+            "Select qualifier type",
+            options=available_qualifiers,
+            index=available_qualifiers.index("HOLDING TIME EXCEEDED") 
+                if "HOLDING TIME EXCEEDED" in available_qualifiers 
+                else 0
+        )
+        
+        # Filter and aggregate
+        qual_filtered = qual_data[
+            qual_data["MeasurementQualifierDescription"] == selected_qualifier
+        ].copy()
+        
+        qual_monthly = (
+            qual_filtered
+            .set_index("SampleDateTime")
+            .groupby(pd.Grouper(freq="MS"))
+            .size()
+            .reset_index(name="Count")
+        )
+        qual_monthly.columns = ["SampleDateTime", "Count"]
+        
+        # Plot
+        fig = px.bar(
+            qual_monthly,
+            x="SampleDateTime",
+            y="Count",
+            labels={"SampleDateTime": "", "Count": "Record Count"},
+            color="Count",
+            color_continuous_scale="Reds",
+        )
+        fig.update_layout(height=400, showlegend=False)
+        st.plotly_chart(fig, use_container_width=True)
+        
+        # Stats
+        if len(qual_monthly) > 0:
+            peak_row = qual_monthly.loc[qual_monthly["Count"].idxmax()]
+            avg_count = qual_monthly["Count"].mean()
+            st.metric(
+                "Peak month",
+                peak_row["SampleDateTime"].strftime("%B %Y"),
+                f"{int(peak_row['Count'])} records"
+            )
+            st.metric("Average per month", f"{avg_count:.0f}")
+    else:
+        st.info("No measurement qualifiers in filtered data.")
+
 
 
  
