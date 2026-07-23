@@ -1,10 +1,10 @@
 # Alberta Surface Water Quality Dashboard
 
-Interactive dashboard for reviewing unvalidated surface water quality data from Alberta's monitoring network (2020–2023). Built for the **Environmental Data Scientist Dashboard Assignment**.
+Interactive dashboard for reviewing unvalidated surface water quality data from Alberta's monitoring network (2020–2023).  
 
 ## What this dashboard does
 
-The dashboard helps **scientists, data stewards, and field staff** quickly:
+The dashboard helps :
 
 1. **Visualize** measurements with interactive filters (date range, basin, parameter, station)
 2. **Compare** values against CCME water quality guidelines (with custom limit overrides)
