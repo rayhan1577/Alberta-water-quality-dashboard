@@ -1,4 +1,4 @@
-# [This is a demo and should be used for demo purpose only]
+# [This is a demo and should be used for demo purpose only] Alberta-water-quality-dashboard
 
 Interactive dashboard for reviewing unvalidated surface water quality data from Alberta's monitoring network (2020–2023).  
 
