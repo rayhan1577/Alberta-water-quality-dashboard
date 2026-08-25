@@ -172,7 +172,7 @@ df =load_data()
 station_scores = compute_station_quality_scores(df)
 
  
-st.markdown('<div class="main-header">💧 Alberta Surface Water Quality Dashboard</div>',
+st.markdown('<div class="main-header">💧 Alberta Surface Water Quality Dashboard [DEMO]</div>',
             unsafe_allow_html=True)
 st.markdown(
     "**Interactive review of unvalidated surface water quality data (2020–2023)** — "
@@ -221,7 +221,7 @@ st.sidebar.markdown(f"**Parameters in view:** {fdf['VariableName'].nunique()}")
 
 with st.sidebar.expander("ℹ️ About this dashboard"):
     st.markdown("""
-    Built for an Environmental Data Scientist assignment using the
+    Built for demo purpose using the
     Alberta surface water quality dataset (2020–2023).
 
     **Features:**
