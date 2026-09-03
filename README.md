@@ -2,7 +2,6 @@
 
 # Alberta-water-quality-dashboard
 
-# Alberta-water-quality-dashboard
 
 Interactive dashboard for reviewing unvalidated surface water quality data from Alberta's monitoring network (2020–2023).  
 
