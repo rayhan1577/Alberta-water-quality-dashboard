@@ -1,4 +1,5 @@
-<p><strong><font color="red">This is a demo and should be used for demo purpose only</font></strong></p>
+> [!WARNING]
+> **This is a demo and should be used for demo purpose only**
 
 # Alberta-water-quality-dashboard
 
